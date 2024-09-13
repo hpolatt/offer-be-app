@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FG3CF4sNvlkDObYI7E3rsdMxpMo1TIUBPDQa1HLcBws=",
+  "Source": "QuotationSystem.Api",
+  "BasePath": "_content/QuotationSystem.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

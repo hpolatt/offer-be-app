@@ -1,0 +1,12 @@
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/bin/Debug/net7.0/QuotationSystem.Domain.deps.json
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/bin/Debug/net7.0/QuotationSystem.Domain.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/bin/Debug/net7.0/QuotationSystem.Domain.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/QuotationSystem.Domain.csproj.AssemblyReference.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/QuotationSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/QuotationSystem.Domain.AssemblyInfoInputs.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/QuotationSystem.Domain.AssemblyInfo.cs
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/QuotationSystem.Domain.csproj.CoreCompileInputs.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/QuotationSystem.Domain.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/refint/QuotationSystem.Domain.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/QuotationSystem.Domain.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Domain/obj/Debug/net7.0/ref/QuotationSystem.Domain.dll

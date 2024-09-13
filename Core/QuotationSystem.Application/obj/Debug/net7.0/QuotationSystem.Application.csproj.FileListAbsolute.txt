@@ -1,0 +1,15 @@
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/bin/Debug/net7.0/QuotationSystem.Application.deps.json
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/bin/Debug/net7.0/QuotationSystem.Application.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/bin/Debug/net7.0/QuotationSystem.Application.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.csproj.AssemblyReference.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.AssemblyInfoInputs.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.AssemblyInfo.cs
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.csproj.CoreCompileInputs.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/refint/QuotationSystem.Application.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/ref/QuotationSystem.Application.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/bin/Debug/net7.0/QuotationSystem.Domain.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/bin/Debug/net7.0/QuotationSystem.Domain.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/obj/Debug/net7.0/QuotationSystem.Application.csproj.CopyComplete

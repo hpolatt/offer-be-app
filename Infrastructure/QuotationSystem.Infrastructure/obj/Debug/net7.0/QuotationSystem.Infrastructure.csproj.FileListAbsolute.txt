@@ -1,0 +1,12 @@
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/bin/Debug/net7.0/QuotationSystem.Infrastructure.deps.json
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/bin/Debug/net7.0/QuotationSystem.Infrastructure.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/bin/Debug/net7.0/QuotationSystem.Infrastructure.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/QuotationSystem.Infrastructure.csproj.AssemblyReference.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/QuotationSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/QuotationSystem.Infrastructure.AssemblyInfoInputs.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/QuotationSystem.Infrastructure.AssemblyInfo.cs
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/QuotationSystem.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/QuotationSystem.Infrastructure.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/refint/QuotationSystem.Infrastructure.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/QuotationSystem.Infrastructure.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/Debug/net7.0/ref/QuotationSystem.Infrastructure.dll
