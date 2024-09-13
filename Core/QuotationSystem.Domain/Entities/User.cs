@@ -1,19 +1,27 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using QuotationSystem.Domain.Common;
 
 namespace QuotationSystem.Domain.Entities
 {
+    [Table("users")]
     public class User : EntityBase, IEntityBase
     {
+
+        [Column("username")]
         public string Username { get; set; } = string.Empty;
         
+        [Column("password_hash")]
         public string PasswordHash { get; set; } = string.Empty;
 
+        [Column("email")]
         public string Email { get; set; } = string.Empty;
 
+        [Column("role")]
         public string Role { get; set; } = string.Empty; // 'admin', 'sales', 'customer'
 
+        [Column("customer_id")]
         public int? CustomerId { get; set; }
         public Customer? Customer { get; set; }
 
