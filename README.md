@@ -1,4 +1,5 @@
-.Net 7 Infrastructure  BE api. 
+## .Net 8 BE API with Onion Architecture. 
+
 Install | Deployment 
 -> You need a Postgre Database and fill the configuration of database to appsettings.Development.json/appsettings.Production.json
 -> please run the migration command to terminal 
