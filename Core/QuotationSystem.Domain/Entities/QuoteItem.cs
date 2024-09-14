@@ -20,16 +20,16 @@ namespace QuotationSystem.Domain.Entities
         public int Quantity { get; set; }
 
         [Column("unit_price")]
-        public decimal UnitPrice { get; set; }
+        public double UnitPrice { get; set; }
 
         [Column("total_price")]
-        public decimal TotalPrice { get; set; } // Calculated as Quantity * UnitPrice
+        public double TotalPrice { get; set; } // Calculated as Quantity * UnitPrice
 
         // Parameterless constructor
         public QuoteItem() { }
 
         // Parameterized constructor
-        public QuoteItem(int quoteId, int productId, int quantity, decimal unitPrice)
+        public QuoteItem(int quoteId, int productId, int quantity, double unitPrice)
         {
             QuoteId = quoteId;
             ProductId = productId;
