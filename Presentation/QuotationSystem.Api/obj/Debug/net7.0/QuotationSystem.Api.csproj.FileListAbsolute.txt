@@ -48,3 +48,5 @@
 /Users/huseyinpolat/Projects/QuotationSystemSln/Presentation/QuotationSystem.Api/bin/Debug/net7.0/QuotationSystem.Domain.pdb
 /Users/huseyinpolat/Projects/QuotationSystemSln/Presentation/QuotationSystem.Api/bin/Debug/net7.0/QuotationSystem.Application.dll
 /Users/huseyinpolat/Projects/QuotationSystemSln/Presentation/QuotationSystem.Api/bin/Debug/net7.0/QuotationSystem.Application.pdb
+/Users/huseyinpolat/Projects/QuotationSystemSln/Presentation/QuotationSystem.Api/bin/Debug/net7.0/MediatR.dll
+/Users/huseyinpolat/Projects/QuotationSystemSln/Presentation/QuotationSystem.Api/bin/Debug/net7.0/MediatR.Contracts.dll

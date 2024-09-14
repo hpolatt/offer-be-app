@@ -13,7 +13,7 @@ namespace QuotationSystem.Domain.Entities
         public string Description { get; set; } = string.Empty;
 
         [Column("price")]
-        public decimal Price { get; set; }
+        public double Price { get; set; }
 
         // One-to-Many: A product can be part of many quote items
         public ICollection<QuoteItem> QuoteItems { get; set; } = new List<QuoteItem>();
@@ -22,7 +22,7 @@ namespace QuotationSystem.Domain.Entities
         public Product() { }
 
         // Parameterized constructor
-        public Product(string name, decimal price, string description = "")
+        public Product(string name, double price, string description = "")
         {
             Name = name;
             Price = price;

@@ -20,7 +20,7 @@ namespace QuotationSystem.Domain.Entities
         public string Status { get; set; } = "draft"; // 'draft', 'submitted', 'approved', 'rejected'
 
         [Column("total_price")]
-        public decimal TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
 
         // One-to-Many: A quote can have many quote items
         public ICollection<QuoteItem> QuoteItems { get; set; } = new List<QuoteItem>();
@@ -29,7 +29,7 @@ namespace QuotationSystem.Domain.Entities
         public Quote() { }
 
         // Parameterized constructor
-        public Quote(int customerId, int userId, string status, decimal totalPrice)
+        public Quote(int customerId, int userId, string status, double totalPrice)
         {
             CustomerId = customerId;
             UserId = userId;

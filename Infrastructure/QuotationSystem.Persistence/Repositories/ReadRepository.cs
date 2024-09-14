@@ -41,7 +41,7 @@ namespace QuotationSystem.Persistence.Repositories
         }
 
 
-        public async Task<IList<T>> GetAllBySyncPaging(Expression<Func<T, bool>>? predicate = null, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, bool enableTracking = false, int currentPage = 1, int pageSize = 3)
+        public async Task<IList<T>> GetAllByAsyncPaging(Expression<Func<T, bool>>? predicate = null, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, bool enableTracking = false, int currentPage = 1, int pageSize = 3)
         {
             IQueryable<T> queryAble = Table;
             if (!enableTracking) queryAble = queryAble.AsNoTracking();
@@ -53,7 +53,7 @@ namespace QuotationSystem.Persistence.Repositories
             return await queryAble.Skip((currentPage - 1) * pageSize).ToListAsync();
         }
 
-        public async Task<IList<T>> GetAllSync(Expression<Func<T, bool>>? predicate = null, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, bool enableTracking = false)
+        public async Task<IList<T>> GetAllAsync(Expression<Func<T, bool>>? predicate = null, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, bool enableTracking = false)
         {
             IQueryable<T> queryAble = Table;
             if (!enableTracking) queryAble = queryAble.AsNoTracking();
@@ -65,7 +65,7 @@ namespace QuotationSystem.Persistence.Repositories
             return await queryAble.ToListAsync();
         }
 
-        public async Task<T> GetASync(Expression<Func<T, bool>> predicate,
+        public async Task<T> GetAsync(Expression<Func<T, bool>> predicate,
             Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null,
              bool enableTracking = false)
         {

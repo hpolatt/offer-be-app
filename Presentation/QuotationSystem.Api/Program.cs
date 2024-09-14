@@ -1,4 +1,6 @@
 ﻿using QuotationSystem.Persistence;
+using QuotationSystem.Application;
+using QuotationSystem.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,9 @@ builder.Configuration
     .AddJsonFile("appsettings.json", optional: false)
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: false);
 
-builder.Services.AddPersistences (builder.Configuration);
+builder.Services.AddPersistences(builder.Configuration);
+builder.Services.AddApplication();
+builder.Services.AddCustomMapper();
 
 var app = builder.Build();
 
