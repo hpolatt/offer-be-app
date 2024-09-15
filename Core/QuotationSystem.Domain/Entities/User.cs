@@ -1,17 +1,24 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 using QuotationSystem.Domain.Common;
 
 namespace QuotationSystem.Domain.Entities
 {
     [Table("users")]
-    public class User : EntityBase, IEntityBase
+    public class User : IdentityUser<Guid>
     {
+        [Column("id")]
+        public Guid Id { get; set; }
 
-        [Column("username")]
-        public string Username { get; set; } = string.Empty;
-        
+        [Column("fullname")]
+        public string FullName { get; set; } = string.Empty;
+
+        public string? RefreshToken { get; set; }
+
+        public DateTime? RefreshTokenExpiryTime { get; set; }
+
         [Column("password_hash")]
         public string PasswordHash { get; set; } = string.Empty;
 
@@ -31,14 +38,13 @@ namespace QuotationSystem.Domain.Entities
         // Parameterless constructor
         public User() { }
 
-        // Parameterized constructor
-        public User(string username, string passwordHash, string email, string role, int? customerId = null)
+        public User(string passwordHash, string email, string role, int? customerId, string fullName)
         {
-            Username = username;
             PasswordHash = passwordHash;
             Email = email;
             Role = role;
             CustomerId = customerId;
+            FullName = fullName;
         }
     }
 }

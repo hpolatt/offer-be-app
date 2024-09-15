@@ -13,7 +13,7 @@ namespace QuotationSystem.Domain.Entities
         public Customer? Customer { get; set; }
 
         [Column("user_id")]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public User? User { get; set; }
 
         [Column("status")]
@@ -29,7 +29,7 @@ namespace QuotationSystem.Domain.Entities
         public Quote() { }
 
         // Parameterized constructor
-        public Quote(int customerId, int userId, string status, double totalPrice)
+        public Quote(int customerId, Guid userId, string status, double totalPrice)
         {
             CustomerId = customerId;
             UserId = userId;

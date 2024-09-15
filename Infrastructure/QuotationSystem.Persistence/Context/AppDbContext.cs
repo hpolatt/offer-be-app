@@ -3,10 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using QuotationSystem.Domain.Entities;
 using QuotationSystem.Persistence.Configurations;
 using System.Reflection;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace QuotationSystem.Persistence.Context
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<User, Role, Guid>
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<User> Users { get; set; }
