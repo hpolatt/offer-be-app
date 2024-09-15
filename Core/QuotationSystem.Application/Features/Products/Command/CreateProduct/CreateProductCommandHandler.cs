@@ -5,7 +5,7 @@ using QuotationSystem.Domain.Entities;
 
 namespace QuotationSystem.Application.Features.Products.Command.CreateProduct;
 
-public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest>
+public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest, Unit>
 {
     private readonly IUnitOfWork unitOfWork;
 
@@ -14,11 +14,13 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandR
         this.unitOfWork = unitOfWork;
     }
 
-    public async Task Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
     {
         Product product = new(request.Name, request.Price, request.Description);
         await unitOfWork.GetWriteRepository<Product>().AddAsync(product);
 
         await unitOfWork.SaveAsync();
+
+        return Unit.Value;
     }
 }
