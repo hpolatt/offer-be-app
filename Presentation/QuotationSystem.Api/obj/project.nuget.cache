@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cHIcGJsZAA4=",
+  "dgSpecHash": "koHSxZ7YrFw=",
   "success": true,
   "projectFilePath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Presentation/QuotationSystem.Api/QuotationSystem.Api.csproj",
   "expectedPackageFiles": [
     "/Users/huseyinpolat/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/huseyinpolat/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
+    "/Users/huseyinpolat/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",

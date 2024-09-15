@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RfRewOOwbV0=",
+  "dgSpecHash": "Q1v2g19m93A=",
   "success": true,
   "projectFilePath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Persistence/QuotationSystem.Persistence.csproj",
   "expectedPackageFiles": [
+    "/Users/huseyinpolat/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
+    "/Users/huseyinpolat/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",

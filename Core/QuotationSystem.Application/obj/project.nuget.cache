@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3+bU3ZBXlDM=",
+  "dgSpecHash": "ZRUVh1DfKAk=",
   "success": true,
   "projectFilePath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/QuotationSystem.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/huseyinpolat/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
+    "/Users/huseyinpolat/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
