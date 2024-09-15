@@ -27,8 +27,8 @@ namespace QuotationSystem.Application.Features.Products.Queries.GetAllProducts
             foreach (var item in map)
                 item.NetPrice = item.Price * 1.15;
             
-
-            return map;
+            throw new Exception("Error Message");
+            // return map;
             
         }
     }
