@@ -17,7 +17,8 @@ namespace QuotationSystem.Persistence.Configurations {
 			// One-to-Many relationship with QuoteItems
 			builder.HasMany (q => q.QuoteItems)
 			       .WithOne (qi => qi.Quote)
-			       .HasForeignKey (qi => qi.QuoteId);
+			       .HasForeignKey (qi => qi.QuoteId)
+				   .OnDelete (DeleteBehavior.Cascade);
 		}
 	}
 }
