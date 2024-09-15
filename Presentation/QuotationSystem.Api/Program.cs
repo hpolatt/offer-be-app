@@ -1,6 +1,7 @@
 ﻿using QuotationSystem.Persistence;
 using QuotationSystem.Application;
 using QuotationSystem.Mapper;
+using QuotationSystem.Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ConfigureExceptionHandlingMiddleware();
 app.UseAuthorization();
 
 app.MapControllers();

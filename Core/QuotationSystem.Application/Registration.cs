@@ -1,6 +1,7 @@
 using System.Reflection;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using QuotationSystem.Application.Exceptions;
 
 namespace QuotationSystem.Application
 {
@@ -9,6 +10,7 @@ namespace QuotationSystem.Application
         public static void AddApplication(this IServiceCollection services)
         {
             var assembly = Assembly.GetExecutingAssembly();
+            services.AddTransient<ExceptionMiddleware>();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assembly));
         }
     }
