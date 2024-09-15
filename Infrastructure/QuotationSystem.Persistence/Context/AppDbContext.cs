@@ -15,7 +15,11 @@ namespace QuotationSystem.Persistence.Context
         public DbSet<QuoteItem> QuoteItems { get; set; }
         public DbSet<Approval> Approvals { get; set; }
         public DbSet<Notification> Notifications { get; set; }
-
+        static AppDbContext()
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -25,7 +29,7 @@ namespace QuotationSystem.Persistence.Context
         public AppDbContext()
         {
         }
-        
+
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
