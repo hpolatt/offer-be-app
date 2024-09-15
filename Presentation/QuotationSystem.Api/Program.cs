@@ -2,6 +2,7 @@
 using QuotationSystem.Application;
 using QuotationSystem.Mapper;
 using QuotationSystem.Application.Exceptions;
+using QuotationSystem.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: false);
 
 builder.Services.AddPersistences(builder.Configuration);
+// builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
 

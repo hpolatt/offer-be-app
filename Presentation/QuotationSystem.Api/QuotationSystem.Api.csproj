@@ -20,9 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\QuotationSystem.Persistence\QuotationSystem.Persistence.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\QuotationSystem.Persistence\QuotationSystem.Persistence.csproj"/>
+    <ProjectReference Include="..\..\Infrastructure\QuotationSystem.Infrastructure\QuotationSystem.Infrastructure.csproj"/>
     <ProjectReference Include="..\..\Core\QuotationSystem.Mapper\QuotationSystem.Mapper.csproj" />
   </ItemGroup>
   <ItemGroup>
