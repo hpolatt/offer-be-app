@@ -7,26 +7,29 @@ using QuotationSystem.Application.Interfaces.AutoMapper;
 using QuotationSystem.Application.UnitOfWorks;
 using QuotationSystem.Domain.Entities;
 
-namespace QuotationSystem.Application.Features.Products.Commands.CreateProduct;
-
-public class CreateProductCommandHandler : BaseHandler, IRequestHandler<CreateProductCommandRequest, Unit>
+namespace QuotationSystem.Application.Features.Products.Commands.CreateProduct
 {
-    private readonly ProductRules productRules;
 
-    public CreateProductCommandHandler(ProductRules productRules, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
+    public class CreateProductCommandHandler : BaseHandler, IRequestHandler<CreateProductCommandRequest, Unit>
     {
-        this.productRules = productRules;
-    }
-    public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
-    {
-        IList<Product> products = await unitOfWork.GetReadRepository<Product>().GetAllAsync();
-        await productRules.ProductNameMustNotBeSame(products, request.Name);
+        private readonly ProductRules productRules;
 
-        Product product = new(request.Name, request.Price, request.Description);
-        await unitOfWork.GetWriteRepository<Product>().AddAsync(product);
+        public CreateProductCommandHandler(ProductRules productRules, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
+        {
+            this.productRules = productRules;
+        }
+        public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
+        {
+            IList<Product> products = await unitOfWork.GetReadRepository<Product>().GetAllAsync();
+            await productRules.ProductNameMustNotBeSame(products, request.Name);
 
-        await unitOfWork.SaveAsync();
+            Product product = new(request.Name, request.Price, request.Description);
+            await unitOfWork.GetWriteRepository<Product>().AddAsync(product);
 
-        return Unit.Value;
+            await unitOfWork.SaveAsync();
+
+            return Unit.Value;
+        }
     }
 }
+

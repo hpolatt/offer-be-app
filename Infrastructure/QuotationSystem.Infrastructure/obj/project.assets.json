@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Bogus/2.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Bogus.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net40/Bogus.dll": {
+            "related": ".XML"
+          }
+        }
+      },
       "FluentValidation/11.7.1": {
         "type": "package",
         "compile": {
@@ -685,6 +698,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Bogus": "2.1.4",
           "FluentValidation": "11.7.1",
           "FluentValidation.DependencyInjectionExtensions": "11.7.1",
           "MediatR": "12.4.1",
@@ -718,6 +732,19 @@
     }
   },
   "libraries": {
+    "Bogus/2.1.4": {
+      "sha512": "hy7obx2zGCkbSAhffhFHYXgFQbw06TfXVdXo6Tkav2faglTwapLvu2PR/oZnBnxxEfaMXgr1MVotWuoRav2XZw==",
+      "type": "package",
+      "path": "bogus/2.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bogus.2.1.4.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.XML",
+        "lib/net40/Bogus.dll"
+      ]
+    },
     "FluentValidation/11.7.1": {
       "sha512": "w9Al4gls6iVGFbTd/NPOPlwzqDTghH+ntL4c4FYUatc+LeybpIwhYArLykZJP/VjF2n3ihj3ws+1yd7KR5lQlg==",
       "type": "package",
@@ -1798,5 +1825,17 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Bogus 2.1.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Bogus",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

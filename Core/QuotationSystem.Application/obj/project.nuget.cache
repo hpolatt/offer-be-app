@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oShmFJWiDX8=",
+  "dgSpecHash": "Z2r+5vn2oFo=",
   "success": true,
   "projectFilePath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/QuotationSystem.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/huseyinpolat/.nuget/packages/bogus/2.1.4/bogus.2.1.4.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
@@ -38,5 +39,16 @@
     "/Users/huseyinpolat/.nuget/packages/system.identitymodel.tokens.jwt/8.0.2/system.identitymodel.tokens.jwt.8.0.2.nupkg.sha512",
     "/Users/huseyinpolat/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Bogus 2.1.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Bogus",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
