@@ -17,6 +17,7 @@
     <None Remove="Features\Products\Queries\GetAllProducts\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Features/Auth/Queries/" />
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Interfaces\UnitOfWorks\" />

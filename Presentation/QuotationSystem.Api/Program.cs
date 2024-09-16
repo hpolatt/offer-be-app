@@ -14,6 +14,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 var env = builder.Environment;
 
 builder.Configuration
@@ -25,6 +28,8 @@ builder.Services.AddPersistences(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
+
+// Swagger configuration
 builder.Services.AddSwaggerGen(c => {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "QuotationSystem.Api", Version = "v1", Description = "Quotation System API" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme(){

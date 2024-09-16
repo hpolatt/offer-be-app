@@ -8,7 +8,7 @@ using QuotationSystem.Application.Features.Products.Queries.GetAllProducts;
 
 namespace QuotationSystem.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
