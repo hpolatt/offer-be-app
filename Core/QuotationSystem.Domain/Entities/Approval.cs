@@ -24,13 +24,13 @@ namespace QuotationSystem.Domain.Entities
         public DateTime? ApprovalDate { get; set; }
 
         [Column("comments")]
-        public string Comments { get; set; } = string.Empty;
+        public string? Comments { get; set; }
 
         // Parameterless constructor
         public Approval() { }
 	
         // Parameterized constructor
-        public Approval(int quoteId, Guid approverId, string approvalStatus, string comments = "")
+        public Approval(int quoteId, Guid approverId, string approvalStatus, string comments)
         {
             QuoteId = quoteId;
             ApproverId = approverId;

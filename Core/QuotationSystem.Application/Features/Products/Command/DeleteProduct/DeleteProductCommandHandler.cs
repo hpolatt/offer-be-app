@@ -1,18 +1,16 @@
 using System;
 using MediatR;
+using Microsoft.AspNetCore.Http;
+using QuotationSystem.Application.Base;
+using QuotationSystem.Application.Interfaces.AutoMapper;
 using QuotationSystem.Application.UnitOfWorks;
 using QuotationSystem.Domain.Entities;
 
 namespace QuotationSystem.Application.Features.Products.Command.DeleteProduct;
 
-public class DeleteProductCommandHandler: IRequestHandler<DeleteProductCommandRequest, Unit>
+public class DeleteProductCommandHandler: BaseHandler, IRequestHandler<DeleteProductCommandRequest, Unit>
 {
-    private readonly IUnitOfWork unitOfWork;
-
-    public DeleteProductCommandHandler(IUnitOfWork unitOfWork)
-    {
-        this.unitOfWork = unitOfWork;
-    }
+    public DeleteProductCommandHandler(IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor) { }
     
     public async Task<Unit> Handle(DeleteProductCommandRequest request, CancellationToken cancellationToken)
     {

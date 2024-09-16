@@ -9,22 +9,13 @@ namespace QuotationSystem.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasKey(u => u.Id);
-
             builder.Property(u => u.FullName)
                 .IsRequired()
                 .HasMaxLength(100);
 
-            builder.Property(u => u.PasswordHash)
-                .IsRequired();
-
             builder.Property(u => u.Email)
                 .IsRequired()
                 .HasMaxLength(100);
-
-            builder.Property(u => u.Role)
-                .IsRequired()
-                .HasMaxLength(20);
 
             // One-to-Many relationship
             builder.HasMany(u => u.Quotes)
