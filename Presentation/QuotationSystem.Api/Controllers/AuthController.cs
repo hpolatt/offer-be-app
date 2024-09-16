@@ -1,7 +1,10 @@
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using QuotationSystem.Application.Features.Auth.Command.Login;
+using QuotationSystem.Application.Features.Auth.Command.RefreshToken;
 using QuotationSystem.Application.Features.Auth.Command.Register;
+using QuotationSystem.Application.Features.Auth.Command.Revoke;
+using QuotationSystem.Application.Features.Auth.Command.RevokeAll;
 
 namespace QuotationSystem.Api.Controllers
 {
@@ -21,6 +24,34 @@ namespace QuotationSystem.Api.Controllers
         {
             await mediator.Send(request);
             return StatusCode(StatusCodes.Status201Created);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginCommandRequest request)
+        {
+            var response = await mediator.Send(request);
+            return StatusCode(StatusCodes.Status200OK, response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RefreshToken(RefreshTokenCommandRequest request)
+        {
+            var response = await mediator.Send(request);
+            return StatusCode(StatusCodes.Status200OK, response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Revoke(RevokeCommandRequest request)
+        {
+            var response = await mediator.Send(request);
+            return StatusCode(StatusCodes.Status200OK, response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RevokeAll()
+        {
+            var response = await mediator.Send(new RevokeAllCommandRequest());
+            return StatusCode(StatusCodes.Status200OK, response);
         }
     }
 }

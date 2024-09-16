@@ -28,12 +28,16 @@ public class RegisterCommandHandler : BaseHandler, IRequestHandler<RegisterComma
         await authRule.UserShouldNotBeExist(await userManager.FindByEmailAsync(request.Email));
         User user = mapper.Map<User, RegisterCommandRequest>(request);
         user.UserName = user.Email;
+        user.NormalizedUserName = user.Email;
+        user.NormalizedEmail = user.Email.ToLower();
         user.SecurityStamp = Guid.NewGuid().ToString();
         
         IdentityResult result = await userManager.CreateAsync(user, request.Password);
         if (result.Succeeded)
         {
-            if (!await roleManager.RoleExistsAsync("user"))
+            
+            var role = await roleManager.RoleExistsAsync("user");
+            if (!role)
             {
                 await roleManager.CreateAsync(new Role 
                 {

@@ -12,7 +12,7 @@ using QuotationSystem.Persistence.Context;
 namespace QuotationSystem.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240915151804_InitialMigration")]
+    [Migration("20240916201314_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -130,12 +130,12 @@ namespace QuotationSystem.Persistence.Migrations
 
             modelBuilder.Entity("QuotationSystem.Domain.Entities.Approval", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<DateTime?>("ApprovalDate")
                         .HasColumnType("timestamp without time zone")
@@ -152,12 +152,11 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnName("approver_id");
 
                     b.Property<string>("Comments")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)")
                         .HasColumnName("comments");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
@@ -165,7 +164,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("quote_id");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
@@ -180,12 +179,12 @@ namespace QuotationSystem.Persistence.Migrations
 
             modelBuilder.Entity("QuotationSystem.Domain.Entities.Customer", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -205,7 +204,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("character varying(100)")
                         .HasColumnName("contact_person");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
@@ -227,7 +226,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("character varying(20)")
                         .HasColumnName("phone_number");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
@@ -238,14 +237,14 @@ namespace QuotationSystem.Persistence.Migrations
 
             modelBuilder.Entity("QuotationSystem.Domain.Entities.Notification", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
@@ -259,7 +258,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("character varying(500)")
                         .HasColumnName("message");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
@@ -276,14 +275,14 @@ namespace QuotationSystem.Persistence.Migrations
 
             modelBuilder.Entity("QuotationSystem.Domain.Entities.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
@@ -304,7 +303,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("double precision")
                         .HasColumnName("price");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
@@ -316,14 +315,14 @@ namespace QuotationSystem.Persistence.Migrations
 
             modelBuilder.Entity("QuotationSystem.Domain.Entities.Quote", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
@@ -341,7 +340,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("double precision")
                         .HasColumnName("total_price");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
@@ -360,14 +359,14 @@ namespace QuotationSystem.Persistence.Migrations
 
             modelBuilder.Entity("QuotationSystem.Domain.Entities.QuoteItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
@@ -391,7 +390,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("unit_price");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
@@ -435,8 +434,7 @@ namespace QuotationSystem.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
-                        .HasColumnName("id");
+                        .HasColumnType("uuid");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
@@ -479,9 +477,7 @@ namespace QuotationSystem.Persistence.Migrations
                         .HasColumnType("character varying(256)");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("password_hash");
+                        .HasColumnType("text");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("text");
@@ -494,12 +490,6 @@ namespace QuotationSystem.Persistence.Migrations
 
                     b.Property<DateTime?>("RefreshTokenExpiryTime")
                         .HasColumnType("timestamp without time zone");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("character varying(20)")
-                        .HasColumnName("role");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text");
