@@ -11,9 +11,9 @@ namespace QuotationSystem.Persistence.Configurations
         {
             builder.HasKey(u => u.Id);
 
-            builder.Property(u => u.Username)
+            builder.Property(u => u.FullName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(100);
 
             builder.Property(u => u.PasswordHash)
                 .IsRequired();

@@ -14,7 +14,7 @@ namespace QuotationSystem.Domain.Entities
         public Quote? Quote { get; set; }
                 
         [Column("approver_id")]
-        public  int ApproverId { get; set; }
+        public  Guid ApproverId { get; set; }
         public User? Approver { get; set; }
                 
         [Column("approval_status")]
@@ -30,7 +30,7 @@ namespace QuotationSystem.Domain.Entities
         public Approval() { }
 	
         // Parameterized constructor
-        public Approval(int quoteId, int approverId, string approvalStatus, string comments = "")
+        public Approval(int quoteId, Guid approverId, string approvalStatus, string comments = "")
         {
             QuoteId = quoteId;
             ApproverId = approverId;

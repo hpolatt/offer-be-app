@@ -75,6 +75,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -136,6 +140,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -203,6 +213,79 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/QuotationSystem.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/QuotationSystem.Infrastructure.csproj",
+        "projectName": "QuotationSystem.Infrastructure",
+        "projectPath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/QuotationSystem.Infrastructure.csproj",
+        "packagesPath": "/Users/huseyinpolat/.nuget/packages/",
+        "outputPath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/huseyinpolat/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/QuotationSystem.Application.csproj": {
+                "projectPath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Application/QuotationSystem.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -332,6 +415,9 @@
             "projectReferences": {
               "/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Mapper/QuotationSystem.Mapper.csproj": {
                 "projectPath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Core/QuotationSystem.Mapper/QuotationSystem.Mapper.csproj"
+              },
+              "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/QuotationSystem.Infrastructure.csproj": {
+                "projectPath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Infrastructure/QuotationSystem.Infrastructure.csproj"
               },
               "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Persistence/QuotationSystem.Persistence.csproj": {
                 "projectPath": "/Users/huseyinpolat/Projects/QuotationSystemSln/Infrastructure/QuotationSystem.Persistence/QuotationSystem.Persistence.csproj"

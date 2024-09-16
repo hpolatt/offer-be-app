@@ -7,6 +7,7 @@ using QuotationSystem.Application.Repositories;
 using QuotationSystem.Persistence.Repositories;
 using QuotationSystem.Persistence.UnitOfWorks;
 using QuotationSystem.Application.UnitOfWorks;
+using QuotationSystem.Domain.Entities;
 
 namespace QuotationSystem.Persistence {
 	public static class Registration {
@@ -19,6 +20,18 @@ namespace QuotationSystem.Persistence {
 			services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
 			services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+			services.AddIdentityCore<User>(opt => {
+				opt.Password.RequireDigit = false;
+				opt.Password.RequireLowercase = false;
+				opt.Password.RequireUppercase = false;
+				opt.Password.RequireNonAlphanumeric = false;
+				opt.Password.RequiredLength = 6;
+				opt.SignIn.RequireConfirmedEmail = false;
+			})
+					.AddRoles<Role>()
+					.AddEntityFrameworkStores<AppDbContext>();
+			
 		}
 	}
 }

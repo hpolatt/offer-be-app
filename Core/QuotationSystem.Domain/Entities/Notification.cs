@@ -9,7 +9,7 @@ namespace QuotationSystem.Domain.Entities
     public class Notification : EntityBase, IEntityBase
     {
         [Column("user_id")]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public User? User { get; set; }
 
         [Column("message")]
@@ -22,7 +22,7 @@ namespace QuotationSystem.Domain.Entities
         public Notification() { }
 
         // Parameterized constructor
-        public Notification(int userId, string message)
+        public Notification(Guid userId, string message)
         {
             UserId = userId;
             Message = message;
