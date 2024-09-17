@@ -23,10 +23,6 @@ namespace QuotationSystem.Persistence.Configurations
                 .IsRequired()
                 .HasMaxLength(100);
 
-            builder.Property(c => c.PhoneNumber)
-                .IsRequired()
-                .HasMaxLength(20);
-
             builder.Property(c => c.CompanyName)
                 .IsRequired()
                 .HasMaxLength(100);

@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using QuotationSystem.Application.Interfaces.RedisCache;
 using QuotationSystem.Application.Interfaces.Tokens;
+using QuotationSystem.Infrastructure.RedisCache;
 using QuotationSystem.Infrastructure.Tokens;
 namespace QuotationSystem.Infrastructure;
 
@@ -14,6 +16,9 @@ public static class Registration
     {
         services.Configure<TokenSettings>(configuration.GetSection("JWT"));
         services.AddTransient<ITokenService, TokenService>();
+
+        services.Configure<RedisCacheSettings>(configuration.GetSection("RedisCacheSettings"));
+        services.AddTransient<IRedisCacheService, RedisCacheService>();
 
         services.AddAuthentication(opt => {
             opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -35,6 +40,11 @@ public static class Registration
                 ClockSkew = TimeSpan.Zero
             };
         });
+        services.AddStackExchangeRedisCache(opt =>
+            {
+                opt.Configuration = configuration["RedisCacheSettings:ConnectionString"];
+                opt.InstanceName = configuration["RedisCacheSettings:InstanceName"];
+            });
     }
 
 }

@@ -1,10 +1,10 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using QuotationSystem.Application.Features.Auth.Command.Login;
-using QuotationSystem.Application.Features.Auth.Command.RefreshToken;
-using QuotationSystem.Application.Features.Auth.Command.Register;
-using QuotationSystem.Application.Features.Auth.Command.Revoke;
-using QuotationSystem.Application.Features.Auth.Command.RevokeAll;
+using QuotationSystem.Application.Features.Auth.Commands.Login;
+using QuotationSystem.Application.Features.Auth.Commands.RefreshToken;
+using QuotationSystem.Application.Features.Auth.Commands.Register;
+using QuotationSystem.Application.Features.Auth.Commands.Revoke;
+using QuotationSystem.Application.Features.Auth.Commands.RevokeAll;
 
 namespace QuotationSystem.Api.Controllers
 {

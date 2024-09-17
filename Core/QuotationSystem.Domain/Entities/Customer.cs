@@ -29,7 +29,7 @@ namespace QuotationSystem.Domain.Entities
         public Customer() { }
 
         // Parameterized constructor
-        public Customer(string name, string contactPerson, string email, string phoneNumber, string companyName, string address)
+        public Customer(string name, string contactPerson, string email, string? phoneNumber, string companyName, string address)
         {
             Name = name;
             ContactPerson = contactPerson;

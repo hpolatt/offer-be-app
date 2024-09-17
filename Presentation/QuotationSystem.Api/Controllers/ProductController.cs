@@ -1,9 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using QuotationSystem.Application.Features.Products.Command.CreateProduct;
-using QuotationSystem.Application.Features.Products.Command.DeleteProduct;
-using QuotationSystem.Application.Features.Products.Command.UpdateProduct;
+using QuotationSystem.Application.Features.Products.Commands.CreateProduct;
+using QuotationSystem.Application.Features.Products.Commands.DeleteProduct;
+using QuotationSystem.Application.Features.Products.Commands.UpdateProduct;
 using QuotationSystem.Application.Features.Products.Queries.GetAllProducts;
 
 namespace QuotationSystem.Api.Controllers
