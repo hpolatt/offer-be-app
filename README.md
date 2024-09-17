@@ -12,9 +12,8 @@
 - [X] MediatR for CQRS (Command Query Responsibility Segregation)
 - [X] Swagger for API Documentation
 - [X] Exception Handling Middleware
+- [X] Caching with Redis
 - [ ] Health Checks
-- [ ] Caching with Redis
-- [ ] Background Services with Hosted Services
 - [ ] Rate Limiting
 - [ ] Logging with Serilog
 
