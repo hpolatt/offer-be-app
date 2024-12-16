@@ -6,19 +6,10 @@ using QuotationSystem.Application.UnitOfWorks;
 
 namespace QuotationSystem.Application.Base;
 
-public class BaseHandler
+public class BaseHandler(IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor)
 {
-    protected readonly IMapper mapper;
-    protected readonly IUnitOfWork unitOfWork;
-    protected readonly IHttpContextAccessor httpContextAccessor;
-    protected readonly string userId;
-    public BaseHandler(IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor)
-    {
-        this.mapper = mapper;
-        this.unitOfWork = unitOfWork;
-        this.httpContextAccessor = httpContextAccessor;
-        this.userId = httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-
-    }
+    protected readonly IMapper mapper = mapper;
+    protected readonly IUnitOfWork unitOfWork = unitOfWork;
+    protected readonly IHttpContextAccessor httpContextAccessor = httpContextAccessor;
+    protected readonly string userId = httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 }

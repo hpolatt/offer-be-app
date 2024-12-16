@@ -12,7 +12,7 @@ public class FluentValidationBehevior<TRequest, TResponse> : IPipelineBehavior<T
     public FluentValidationBehevior(IEnumerable<IValidator<TRequest>> validator) {
         this.validator = validator;
     }
-        public Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+    public Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         var context = new ValidationContext<TRequest>(request);
         var failures = validator

@@ -1,5 +1,4 @@
 using System;
-using System.Net;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using SendGrid.Helpers.Errors.Model;
@@ -36,9 +35,9 @@ public class ExceptionMiddleware : IMiddleware
             }.ToString());
 
         List<string> errors = new() {
-            exception.Message,
-            exception.InnerException?.ToString()
+            exception.Message
         };
+        if (exception.InnerException is not null) errors.Add(exception.InnerException.ToString());
 
         return httpContext.Response.WriteAsync(new ExceptionModel
         {
